@@ -1,6 +1,7 @@
-import { HStack } from "native-base";
 import React from "react";
 import HistoryCard from "./HistoryCard";
+import { Button } from "native-base";
+import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 
 const sampleDoneeData = [
@@ -33,7 +34,13 @@ const sampleDoneeData = [
 console.log(ethers);
 
 const History = () => {
-  return <HistoryCard data={sampleDoneeData} />;
+  const navigate = useNavigate();
+  return (
+    <>
+      <Button onPress={() => navigate("/home")}>Go back</Button>
+      <HistoryCard data={sampleDoneeData} />
+    </>
+  );
 };
 
 export default History;

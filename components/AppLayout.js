@@ -1,10 +1,10 @@
 import { Center, Container, Heading, Text } from "native-base";
 import React from "react";
-import CardComponent from "./cardComponent";
+import CardComponent from "./CardComponent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
 // import MenuDrawer from "./mainMenu";
-import DoneeForm from "./doneeForm";
+import DoneeForm from "./DoneeForm";
 import History from "./MyHistory";
 import { ConnectWallet } from "./connectWallet";
 import Login from "./LoginPage";
