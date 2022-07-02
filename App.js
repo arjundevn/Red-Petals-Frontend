@@ -52,7 +52,7 @@ export default function App() {
             >
               App.js
             </Box>
-            <Text>and save to reload.</Text>
+            <Text>Sample Text</Text>
           </HStack>
           <Link href="https://docs.nativebase.io" isExternal>
             <Text color="primary.500" underline fontSize={"xl"}>
