@@ -1,12 +1,14 @@
 import { Box, Button, Heading, Input, VStack } from "native-base";
 import { useNavigate } from "react-router-dom";
 import React from "react";
+import GetAddress from "./GetAddress";
 
 const DoneeForm = () => {
   const navigate = useNavigate();
   return (
     <>
       <Button onPress={() => navigate("/home")}>Go back</Button>
+      <GetAddress />
       <div>
         <Box
           alignItems="center"

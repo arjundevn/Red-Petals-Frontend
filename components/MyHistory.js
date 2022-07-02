@@ -3,6 +3,7 @@ import HistoryCard from "./HistoryCard";
 import { Button } from "native-base";
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
+import GetAddress from "./GetAddress";
 
 const sampleDoneeData = [
   {
@@ -38,6 +39,7 @@ const History = () => {
   return (
     <>
       <Button onPress={() => navigate("/home")}>Go back</Button>
+      <GetAddress />
       <HistoryCard data={sampleDoneeData} />
     </>
   );

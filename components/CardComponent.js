@@ -2,6 +2,7 @@ import React from "react";
 import DoneeDetails from "./doneeDetails";
 import { Button } from "native-base";
 import { useNavigate } from "react-router-dom";
+import GetAddress from "./GetAddress";
 
 const sampleDoneeData = [
   {
@@ -30,11 +31,13 @@ const sampleDoneeData = [
   },
 ];
 
-const CardComponent = () => {
+const CardComponent = (address) => {
   const navigate = useNavigate();
+  console.log('address', address)
   return (
     <>
       <Button onPress={() => navigate("/home")}>Go back</Button>
+      <GetAddress />
       <DoneeDetails details={sampleDoneeData} />
     </>
   );
