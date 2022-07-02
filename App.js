@@ -1,7 +1,7 @@
 import { Center, extendTheme, NativeBaseProvider, VStack } from "native-base";
 import React from "react";
-// import AppLayout from "./src/appLayout";
-import Login from "./components/loginPage";
+import AppLayout from "./components/AppLayout";
+import Login from "./components/LoginPage";
 
 // Define the config
 const config = {
@@ -17,7 +17,7 @@ export default function App() {
     <NativeBaseProvider theme={theme}>
       <Center _dark={{ bg: "blueGray.900" }} px={4} flex={1}>
         <VStack space={5} alignItems="center">
-          <Login />
+          <AppLayout />
         </VStack>
       </Center>
     </NativeBaseProvider>

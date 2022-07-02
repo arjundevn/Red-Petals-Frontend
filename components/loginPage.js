@@ -1,6 +1,6 @@
 import { Button, Box } from "native-base";
 import { ethers } from "ethers";
-import HomePage from "./homePage";
+import HomePage from "./HomePage";
 import React from "react";
 
 const Login = () => {

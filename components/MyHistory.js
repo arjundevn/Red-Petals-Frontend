@@ -1,5 +1,7 @@
+import { HStack } from "native-base";
 import React from "react";
-import DoneeDetails from "./doneeDetails";
+import HistoryCard from "./HistoryCard";
+import { ethers } from "ethers";
 
 const sampleDoneeData = [
   {
@@ -28,8 +30,10 @@ const sampleDoneeData = [
   },
 ];
 
-const CardComponent = () => {
-  return <DoneeDetails details={sampleDoneeData} />;
+console.log(ethers);
+
+const History = () => {
+  return <HistoryCard data={sampleDoneeData} />;
 };
 
-export default CardComponent;
+export default History;
