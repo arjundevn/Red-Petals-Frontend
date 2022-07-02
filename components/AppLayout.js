@@ -3,10 +3,8 @@ import React from "react";
 import CardComponent from "./CardComponent";
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import HomePage from "./HomePage";
-// import MenuDrawer from "./mainMenu";
 import DoneeForm from "./DoneeForm";
 import History from "./MyHistory";
-import { ConnectWallet } from "./connectWallet";
 import Login from "./LoginPage";
 
 const AppLayout = () => {

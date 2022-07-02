@@ -2,9 +2,8 @@ import { Heading, Text, Button, Box, HStack, Link } from "native-base";
 import React from "react";
 import CardComponent from "./CardComponent";
 import { useNavigate } from "react-router-dom";
-import GetAddress from './GetAddress'
-
-// import DoneeForm from "./doneeForm";
+import GetAddress from "./GetAddress";
+import Logout from "./Logout";
 
 const HomePage = () => {
   const navigate = useNavigate();
@@ -29,8 +28,9 @@ const HomePage = () => {
 
   return (
     <>
+      <Logout />
       <Box alignItems="center">
-      <GetAddress />
+        <GetAddress />
         <HStack space={3} justifyContent="center">
           <Button
             height="100px"
@@ -41,7 +41,7 @@ const HomePage = () => {
           >
             Donate blood
           </Button>
-          {showDoneeDetailCard && <CardComponent address={address}/>}
+          {showDoneeDetailCard && <CardComponent address={address} />}
           <Button height="100px" width="200px" onPress={() => askForBlood()}>
             Ask for blood
           </Button>

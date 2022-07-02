@@ -3,6 +3,7 @@ import DoneeDetails from "./doneeDetails";
 import { Button } from "native-base";
 import { useNavigate } from "react-router-dom";
 import GetAddress from "./GetAddress";
+import Logout from "./Logout";
 
 const sampleDoneeData = [
   {
@@ -33,9 +34,10 @@ const sampleDoneeData = [
 
 const CardComponent = (address) => {
   const navigate = useNavigate();
-  console.log('address', address)
+  console.log("address", address);
   return (
     <>
+      <Logout />
       <Button onPress={() => navigate("/home")}>Go back</Button>
       <GetAddress />
       <DoneeDetails details={sampleDoneeData} />

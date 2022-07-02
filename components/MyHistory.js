@@ -4,6 +4,7 @@ import { Button } from "native-base";
 import { useNavigate } from "react-router-dom";
 import { ethers } from "ethers";
 import GetAddress from "./GetAddress";
+import Logout from "./Logout";
 
 const sampleDoneeData = [
   {
@@ -38,6 +39,7 @@ const History = () => {
   const navigate = useNavigate();
   return (
     <>
+      <Logout />
       <Button onPress={() => navigate("/home")}>Go back</Button>
       <GetAddress />
       <HistoryCard data={sampleDoneeData} />

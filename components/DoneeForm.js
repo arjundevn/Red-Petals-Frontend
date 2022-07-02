@@ -2,11 +2,13 @@ import { Box, Button, Heading, Input, VStack } from "native-base";
 import { useNavigate } from "react-router-dom";
 import React from "react";
 import GetAddress from "./GetAddress";
+import Logout from "./Logout";
 
 const DoneeForm = () => {
   const navigate = useNavigate();
   return (
     <>
+      <Logout />
       <Button onPress={() => navigate("/home")}>Go back</Button>
       <GetAddress />
       <div>
