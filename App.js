@@ -15,7 +15,9 @@ import {
 import NativeBaseIcon from "./components/NativeBaseIcon";
 import { Platform } from "react-native";
 import { ethers } from "ethers";
-import Login from './components/loginPage'
+import Login from './components/LoginPage';
+
+import { ConnectWallet } from "./components/ConnectWallet";
 // Define the config
 const config = {
   useSystemColorMode: false,
