@@ -6,20 +6,18 @@ import React from "react";
 
 const Login = () => {
   const [homePage, setHomePage] = React.useState(false);
+  const [validate, setValidate] = React.useState(false);
   const [aadhar, setAadhar] = React.useState();
-  const handleClick = async () => {
+
+  const handleClick = async (data) => {
+    console.log("hello");
     const provider = new ethers.providers.Web3Provider(window.ethereum);
-
-    // MetaMask requires requesting permission to connect users accounts
     await provider.send("eth_requestAccounts", []);
-
-    // The MetaMask plugin also allows signing transactions to
-    // send ether and pay to change state within the blockchain.
-    // For this, you need the account signer...
-    const signer = provider.getSigner();
-    if (signer) {
-      setHomePage(true);
-    }
+    // const isExist = await redPetalsData().aadharExists("123");
+    // console.log(isExist);
+    // isExist ? console.log("hi", isExist) : console.log("bye");
+    setHomePage(true);
+    redPetalsData().then((data) => console.log(data));
   };
 
   const getInputValue = (event) => {
@@ -28,11 +26,17 @@ const Login = () => {
     setAadhar(userValue);
   };
 
-  console.log(aadhar);
+  const redPetalsData = async (data) => {
+    // const isExist = await data.aadharExists("123");
+    // console.log(isExist);
+    // isExist ? console.log("hi", isExist) : console.log("bye");
+    // setReadPetalsDetails(data);
+    return data;
+  };
 
   return (
     <>
-      <InitializeEthers />
+      <InitializeEthers func={redPetalsData} />
       <Box alignItems="center">
         {!homePage && (
           <>

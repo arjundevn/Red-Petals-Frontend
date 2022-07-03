@@ -3,7 +3,7 @@ import { ethers } from "ethers";
 import RedPetalsArtiFact from "../contracts/RedPetals.json";
 import ContractAddress from "../contracts/contract-address.json";
 
-const InitializeEthers = () => {
+const InitializeEthers = (props) => {
   const [redPetalsData, setReadPetalsData] = React.useState({});
   const provider = new ethers.providers.Web3Provider(window.ethereum);
 
@@ -16,6 +16,8 @@ const InitializeEthers = () => {
   React.useEffect(() => {
     setReadPetalsData(redPetals);
   }, []);
+
+  props.func(redPetals);
 
   console.log(redPetalsData);
   return <div>Hello</div>;
